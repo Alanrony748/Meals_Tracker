@@ -1,0 +1,140 @@
+###
+POST  http://127.0.0.1:8000/signup/
+Content-Type: application/json
+
+{
+    "username":"Doom",
+    "email":"doom@gamil.com",
+    "password":"doom@123"
+}
+
+
+###
+GET http://127.0.0.1:8000/user/
+Accept: application/json
+Authorization: Basic Alan:alan@123
+
+
+###
+POST http://127.0.0.1:8000/food/
+Content-Type: application/json
+Authorization: Basic Alan:alan@123
+
+{
+    "food_name": "Eri peri Kuzhimandhi",
+    "meal_type": "Dinner",
+    "quantity": "2 plate",
+    "calories": 600,
+    "meal_date": "2026-11-16",
+    "notes": "Arabian Palace "
+}
+
+
+###
+GET http://127.0.0.1:8000/food/
+Accept: application/json
+Authorization: Basic Doom:doom@123
+
+
+
+###
+PUT http://127.0.0.1:8000/food/1/
+Content-Type: application/json
+Authorization: Basic Doom:doom@123
+
+{
+    "food_name": "Chicken Biriyani",
+    "meal_type": "Lunch",
+    "quantity": "1.5 plate",
+    "calories": 550,
+    "meal_date": "2026-11-16",
+    "notes": "Vineeth Srinivasan Chennai biriyani"
+}
+
+
+###
+DELETE http://127.0.0.1:8000/food/2/
+Authorization: Basic Doom:doom@123
+
+
+
+###
+GET http://127.0.0.1:8000/weight/
+Accept: application/json
+Authorization: Basic Doom:doom@123
+
+
+
+###
+POST  http://127.0.0.1:8000/weight/
+Content-Type: application/json
+Authorization: Basic Doom:doom@123
+
+{
+    "weight":79.5,
+    "recorded_date":"2026-11-18",
+    "notes":"Weight in Morning"
+}
+
+###
+POST http://127.0.0.1:8000/login/
+Content-Type: application/json
+
+{
+    "username":"Doom",
+    "password":"doom@123"
+}
+
+###
+POST http://127.0.0.1:8000/refresh/
+Content-Type: application/json
+Authorization: BearereyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc5NTQ1NDIzNCwiaWF0IjoxNzk1MzY3ODM0LCJqdGkiOiJlYmMzNWE4MDg0ZTM0NmM5OTNkOTRiNTU1NDAxZTlmZiIsInVzZXJfaWQiOiIzIn0.iDd_te_4OsI2bhP6hqJrYTFJLn6klvJ69bIfsI0gzfo
+
+{
+    "refresh":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc5NTQ1NDIzNCwiaWF0IjoxNzk1MzY3ODM0LCJqdGkiOiJlYmMzNWE4MDg0ZTM0NmM5OTNkOTRiNTU1NDAxZTlmZiIsInVzZXJfaWQiOiIzIn0.iDd_te_4OsI2bhP6hqJrYTFJLn6klvJ69bIfsI0gzfo"
+}
+
+###
+POST http://127.0.0.1:8000/logout/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzk1MzY3MzQ5LCJpYXQiOjE3OTUzNjcwNDksImp0aSI6IjNhY2ExOGZjZGFlMjRhN2E5Y2RhZThjNzcwODc4OTliIiwidXNlcl9pZCI6IjMifQ.Dsf5YLxt6vXBwwcT23kO4RhpJC1__dsIWAMUwJ7AR-A
+
+{
+    "refresh":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc5NTQ1MjgwNSwiaWF0IjoxNzk1MzY2NDA1LCJqdGkiOiI4NzRiZjczODI1Mzk0ZWE4YjEzYTk0OWYyZjJmNGNlMyIsInVzZXJfaWQiOiIzIn0.b2spZwyL-_QE0PbHTxRW4n6I9qyHBNNAqpsdcSaOJy8"
+
+}
+
+
+###
+GET http://127.0.0.1:8000/food/
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzk1MzY3NjMwLCJpYXQiOjE3OTUzNjczMzAsImp0aSI6ImM1Y2JkNjAzYzZlYjQ4YjhiYjYxYmUwZmUzNjc4ZDY3IiwidXNlcl9pZCI6IjMifQ.O0wHBOZSY32rKi1C87wHLgj2OWQG887haudO0eS_vUo
+
+
+###
+POST http://127.0.0.1:8000/food/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzk1MzY3NjMwLCJpYXQiOjE3OTUzNjczMzAsImp0aSI6ImM1Y2JkNjAzYzZlYjQ4YjhiYjYxYmUwZmUzNjc4ZDY3IiwidXNlcl9pZCI6IjMifQ.O0wHBOZSY32rKi1C87wHLgj2OWQG887haudO0eS_vUo
+
+{
+    "food_name": "Porrota and beef",
+    "meal_type": "Breakfast",
+    "quantity": "1 plate",
+    "calories": 400,
+    "meal_date": "2026-11-22",
+    "notes": "super breakfast"
+}
+
+###
+PUT http://127.0.0.1:8000/food/5/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzk1MzY3NjMwLCJpYXQiOjE3OTUzNjczMzAsImp0aSI6ImM1Y2JkNjAzYzZlYjQ4YjhiYjYxYmUwZmUzNjc4ZDY3IiwidXNlcl9pZCI6IjMifQ.O0wHBOZSY32rKi1C87wHLgj2OWQG887haudO0eS_vUo
+
+{
+    "food_name": "Porrota and beef with Chai",
+    "meal_type": "Breakfast",
+    "quantity": "1 plate",
+    "calories": 450,
+    "meal_date": "2026-11-22",
+    "notes": "ravilathe breakfast",
+}
