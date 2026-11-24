@@ -38,30 +38,6 @@ Meals Tracker is a REST API developed using Django REST Framework. It provides f
 - Store recording date and notes
 - Associate weight records with users
 
-## Project Structure
-
-```text
-meals_tracker/
-│
-├── Food_Diary/
-│   ├── migrations/
-│   ├── models.py
-│   ├── serializers.py
-│   ├── views.py
-│   ├── urls.py
-│   └── admin.py
-│
-├── meals_tracker/
-│   ├── settings.py
-│   ├── urls.py
-│   ├── asgi.py
-│   └── wsgi.py
-│
-├── manage.py
-├── requirements.txt
-├── README.md
-└── .gitignore
-```
 
 ## API Endpoints
 
@@ -81,57 +57,7 @@ meals_tracker/
 
 *Note: Update the refresh endpoint path in this table if your final URL configuration uses `/token/refresh/` instead of `/refresh/`.*
 
-## Installation and Setup
 
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/Alanrony748/Meals_Tracker.git
-```
-
-### 2. Navigate to the project directory
-
-```bash
-cd Meals_Tracker
-```
-
-### 3. Create a virtual environment
-
-```bash
-python -m venv venv
-```
-
-### 4. Activate the virtual environment
-
-Windows:
-
-```bash
-venv\Scripts\activate
-```
-
-### 5. Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### 6. Apply database migrations
-
-```bash
-python manage.py migrate
-```
-
-### 7. Start the development server
-
-```bash
-python manage.py runserver
-```
-
-The application will be available at:
-
-```text
-http://127.0.0.1:8000/
-```
 
 ## JWT Authentication
 
@@ -149,9 +75,6 @@ Authorization: Bearer <access_token>
 5. Use the refresh token to obtain a new access token.
 6. Logout by submitting the refresh token to the logout endpoint.
 
-## Testing
-
-API endpoints can be tested using Postman or a VS Code REST Client HTTP file.
 
 ## Author
 
